@@ -1,4 +1,4 @@
-// What can be used front of variable name?
+// What can be used front of variable name? - camel case
 // 1. let
 // When we want to change 33 to something, we use let.
 let a = 33;
@@ -29,3 +29,11 @@ const num = 12345;
 
 // 4. Float
 const fl = 33.1;
+
+// How can we organize data
+// 1. Array - kind of list
+// You can input in array every type of datas
+// Index starts to 0
+const daysOfWeek = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun",54,true];
+
+console.log(daysOfWeek);
