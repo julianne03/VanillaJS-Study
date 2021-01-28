@@ -31,9 +31,33 @@ const num = 12345;
 const fl = 33.1;
 
 // How can we organize data
-// 1. Array - kind of list
+// 1. Array - kind of list []
 // You can input in array every type of datas
 // Index starts to 0
 const daysOfWeek = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun",54,true];
 
 console.log(daysOfWeek);
+
+// 2. Object {}
+// You can save data and label together
+// You can get data with dot (.)
+const juliInfo = {
+  name : 'juli',
+  age : 19,
+  gender : "Female",
+  favMovies : ["Along the gods", "LOTR", "lalaland"],
+  favFood : [
+    {
+      name : "불고기",
+      fatty : true
+    }, 
+    {
+      name : "피자",
+      fatty : true
+    }
+  ]
+}
+
+console.log(juliInfo);
+juliInfo.age = 18
+console.log(juliInfo.favFood[0].name);
