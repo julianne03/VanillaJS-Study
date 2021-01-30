@@ -6,23 +6,14 @@ const title = document.querySelector('#title');
 // DOM : Document Object Model
 // javascript -> html change to object
 
-const BASE_COLOR = "white";
-const OTHER_COLOR = "black";
-// It will be change to h1 context
-title.innerHTML = "Hi! From JS";
-
-// Modifying the DOM with JS
-document.title = "I Own you now.";
+const CLICKED_CLASS = "clicked";
 
 // events and event handler
 // 1. make a function
 function handleClick() {
-  const  currentColor = title.style.color;
-  if (currentColor === BASE_COLOR) {
-    title.style.color = OTHER_COLOR;
-  } else {
-    title.style.color = BASE_COLOR;
-  }
+  // If that class contains in classList, 
+  // true -> remove that class false -> add that class 
+  title.classList.toggle(CLICKED_CLASS);
 }
 
 // 2. make a eventhandler
@@ -31,15 +22,6 @@ function handleClick() {
 // If you with (), it means you call function now!
 // You can know more about dom at MDN site
 function init() {
-  title.style.color = BASE_COLOR;
   title.addEventListener("click", handleClick);
 }
 init();
-function handleOffLine() {
-  console.log('Bye Bye!')
-}
-function handleOnLine() {
-  console.log('Welcome back!')
-}
-window.addEventListener("offline", handleOffLine);
-window.addEventListener("online", handleOnLine);
