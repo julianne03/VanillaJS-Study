@@ -14,7 +14,7 @@ function deleteToDo(event) {
         // if return value is true, it will be added in new array.
         return toDo.id !== parseInt(li.id);
     });
-    toDos = cleanToDos
+    toDos = cleanToDos;
     saveToDos();
 } 
 
