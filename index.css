@@ -1,14 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+body,
+html {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-  background-color: #ffffff;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  background: none;
+  appearance: none;
+  border: 0;
+  font-size: 22px;
+  color: white;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+input::placeholder {
+  color: white;
+  text-align: center;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .btn {
   cursor: pointer;
 }
 
-h1 {
-  color: white;
-  transition: color 0.5s ease-in-out;
+.js-clock {
+  margin-top: 20%;
+}
+
+.js-clock-title {
+  font-size: 110px;
 }
 
 .clicked {
@@ -17,11 +75,15 @@ h1 {
 
 .form,
 .greetings {
-  display: none;
+  display: block;
 }
 
-.showing {
-  display: block;
+.greetings {
+  font-weight: lighter;
+}
+
+.js-todo {
+  margin-top: 5%;
 }
 
 @keyframes fadeIn {
@@ -33,6 +95,11 @@ h1 {
   }
 }
 
+.showing {
+  display: block;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
 .bgImage {
   position: absolute;
   top: 0;
@@ -41,4 +108,26 @@ h1 {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+.js-weather {
+  position: absolute;
+  font-style: italic;
+  font-size: 12px;
+  top: 25px;
+  right: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin-top: 50px;
+}
+
+li {
+  animation: fadeIn 1s ease-in-out forwards;
 }
