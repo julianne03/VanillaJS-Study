@@ -23,7 +23,10 @@ function askForName() {
   form.addEventListener("submit", handleSubmit);
 }
 
-function paintGreeting(text, timeTxt) {
+function paintGreeting(text) {
+  getTimeTxt();
+  setInterval(getTimeTxt, 60000);   // every 1 hour
+  const timeTxt = getTimeTxt();
   nameContainer.innerHTML = "";
   greeting.classList.add(SHOWING_CN);
   greeting.innerText = `${timeTxt}, ${text}.`;
@@ -48,14 +51,11 @@ function getTimeTxt() {
 // localStorage
 // You can save small user's infomation in here. 
 function loadName() {
-  getTimeTxt();
-  setInterval(getTimeTxt, 60000);   // every 1 hour
-  const timeTxt = getTimeTxt();
   const currentUser = localStorage.getItem(USER_LS);
   if(currentUser === null) {
     askForName();
   } else {
-    paintGreeting(currentUser, timeTxt);
+    paintGreeting(currentUser);
   }
 }
 function init() {
